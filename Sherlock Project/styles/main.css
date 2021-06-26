@@ -1,0 +1,28 @@
+body {
+    background-color: #EAEBED;
+}
+
+img {
+  margin-left: 20%;
+  margin-right: 5%;
+  margin-top: 5%;
+  width: 25%;
+  float:left;
+}
+.right-side {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 20%;
+  margin-top: 8%;
+  width: 30%;
+  float:left;
+  text-align: center;
+}
+
+a {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #696F89;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
