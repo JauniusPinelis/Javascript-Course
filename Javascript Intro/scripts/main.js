@@ -182,7 +182,299 @@
 //       break; 
 // }
 
-// Functions
-function showHelloMessage(){
-    console.log("Hello everyone");
-}
+// //This is a global variable and it can be seen in any function
+// let someName = "Paul";
+
+// // Functions
+// function showHelloMessage(name){
+//     //Local scope-> only visible in this function
+//     let defaultName = "Tom"; 
+//     if (name == null){
+//         name = defaultName;
+//     }
+//     console.log("Hello " + name);
+// }
+
+// showHelloMessage("Peter");
+// showHelloMessage("John");
+// showHelloMessage();
+
+// // Function multiple parameters
+
+// function showHelloMessage(forename = "Tom", surname =  "Surname"){
+//     //Local scope-> only visible in this function
+
+//     console.log("Hello " + forename + " " + surname);
+// }
+// let nameJohn = "John";
+// showHelloMessage(nameJohn, "Smith");
+// showHelloMessage();
+// showHelloMessage("Jenny");
+
+// Returns of a function
+
+// function getSum(number1, number2){
+//     let sumResult = number1 + number2;
+//     return sumResult;
+//     sumResult += 10;
+// }
+
+// let sumResult = getSum(1,6);
+// console.log(sumResult);
+
+// // Function Expression
+// var sum2 = function(a, b){
+//     return a + b;
+// }
+// console.log(sum2(1,2));
+
+// Arrow functions
+// let sumExpression = function(num1,num2) {
+//     return num1+ num2;
+// }
+
+// let sumInArrow = (num1, num2) => num1 + num2;
+
+// console.log(sumInArrow(1,2));
+
+// objects
+// numbers, booleans, string, date
+
+// let car = {
+//     brand: "Audi",
+//     color: "Black",
+//     price: 20000
+// }
+
+// let shopItem = {
+//     name: "Ice cream",
+//     Price: 2
+// }
+
+// car.used = true;
+// car.brand = null;
+
+// car.getInfo = function(){
+//     let info = "";
+//     info += "Brand is " + this.brand + "\n";
+//     info += "Color is " + this.color + "\n";
+//     info += "Price is " + this.price + "\n";
+//     info += "Is used? " + this.used; 
+//     return info;
+// }
+
+// console.log(car.getInfo());
+
+// arrays
+
+// let car1 = "Volvo";
+// let car2 = "Audi";
+// let car3 = "Peugeot";
+
+// let cars = ["Volvo","Audi","Peugeot"]
+
+// let firstCar = cars[0];
+// let secondCar = cars[1];
+// let thirdCar = cars[2];
+
+// console.log(firstCar);
+// console.log(secondCar);
+// console.log(thirdCar);
+
+// cars[0] = "Mercedes";
+
+// console.log(cars.toString());
+
+// // Array's properties
+
+// let arrayLength = cars.length;
+
+// console.log(arrayLength);
+
+// // getting last array element
+// let lastCar = cars[cars.length - 1];
+
+// console.log(lastCar);
+
+// loop through each array element
+
+// for (let i = 0; i < cars.length; i++) {
+//     const car = cars[i];
+//     console.log(car);
+// }
+
+// foreach loop in array element
+
+// cars.forEach(car => {
+//     console.log(car);
+// });
+
+// We can push new values into the array
+
+// cars.push("Saab");
+
+// cars.pop();
+
+// avoid this to add new items, only modify existing ones.
+// cars[10] = "BMW";
+
+// console.log(cars.length);
+
+// // Array can have methods
+// cars.sort();
+
+// cars.forEach(car => {
+//     console.log(car);
+// });
+
+// Arrays continued
+
+// let arrayVariable = ["test",2,true];
+
+// arrayVariable.forEach(e => {
+//     console.log(e);
+// });
+
+// for (let i = 0; i < arrayVariable.length; i++) {
+//     const element = arrayVariable[i];
+//     console.log(element);
+// }
+
+// console.log(arrayVariable[0]);
+// console.log(arrayVariable[1]);
+// console.log(arrayVariable[2]);
+// console.log(arrayVariable[3]);
+
+// empty array
+// let newArray = ["string1", "string2"];
+
+// let newSyntaxArray = new Array("string1", "string2");
+
+// for (let i = 0; i < newArray.length; i++) {
+//     const element = newArray[i];
+//     console.log(element);
+// }
+
+// let eightyUndefinedArray = new Array(80);
+// eightyUndefinedArray[0] = "First";
+// eightyUndefinedArray[79] = "Last";
+
+// for (let i = 0; i < eightyUndefinedArray.length; i++) {
+//     const element = eightyUndefinedArray[i];
+//     console.log(element);
+// }
+
+// Two dimensional array // multidimensional arrays // jagged array
+// let twoDimensionalArray = [
+//     ["Paul", "Sarah", "Ann"],
+//     ["John", "Tom"],
+//     ["Iain"],
+//     []
+// ];
+
+// twoDimensionalArray.forEach(innerArray => {
+//     innerArray.forEach(element => {
+//         console.log(element);
+//     });
+// });
+// console.log(twoDimensionalArray[0][2]);
+
+// let arrayToModify = ["Apple", "Orange", "Lemon"];
+// let strawberry = "Strawberry";
+
+// arrayToModify[10] = strawberry;
+// arrayToModify.push(strawberry);
+// arrayToModify.unshift(strawberry);
+
+//  arrayToModify.splice(3, 4, "Banana");
+
+// arrayToModify.pop();
+// arrayToModify.pop();
+// arrayToModify.pop();
+
+// for (let i = 0; i < arrayToModify.length; i++) {
+//     const element = arrayToModify[i];
+//     console.log(i + ": " + element);
+// }
+
+// Array functions 
+
+// function subtract(a, b){
+//     return a - b
+// };
+
+// let subtract2 = (a, b) => a - b;
+
+// Array filter
+
+// let arrayToModify = ["Apple", "Orange", "Lemon", "Lime"];
+
+//  let filteredFruits = arrayToModify.filter(f => f.length > 0);
+
+//  // map function
+//  filteredFruits = filteredFruits.map(f => f.toUpperCase());
+
+//  // foreach
+//  filteredFruits.forEach(f => f = f.toLowerCase());
+
+// for (let i = 0; i < filteredFruits.length; i++) {
+//     const element = filteredFruits[i];
+//     console.log(i + ": " + element);
+// }
+
+// Arrays of object
+
+let sampleCar = {
+    brand: "Peugeot",
+    color: "Red",
+    year: 2020
+};
+
+let cars = [
+    {
+        brand: "Peugeot",
+        color: "Red",
+        year: 2020
+    },
+    {
+        brand: "Audi",
+        color: "Grey",
+        year: 2010
+    },
+    {
+        brand: "Toyota",
+        color: "Blue",
+        year: 2015
+    },
+    {
+        brand: "Toyota",
+        color: "Blue",
+        year: 2000
+    },
+    {
+        brand: "Saab",
+        color: "Grey",
+        year: 2005
+    }
+];
+
+let allGreyCars = cars.filter(c => c.color === "Grey");
+let newCars = cars.filter(c => c.year >= 2012);
+console.log(newCars);
+
+allCarColors = cars.map(c => c.color);
+
+let distinctCarColors = [...new Set(allCarColors)];
+console.log(distinctCarColors);
+
+// cars.forEach(c => c.year = 2021)
+console.log(cars);
+
+// We can mix map, foreach, filter
+// all Toyota cars to be update to 2021
+
+cars.filter(c => c.brand == "Toyota").forEach(c => c.year = 2021);
+
+console.log(cars);
+
+// DOM
