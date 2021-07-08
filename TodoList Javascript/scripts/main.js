@@ -1,0 +1,1 @@
+console.log("Check if javascript works");
