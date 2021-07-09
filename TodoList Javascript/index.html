@@ -16,19 +16,20 @@
     
         <div class="row">
             <div class="col">
-                <form>
+                <form onsubmit="return false;">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Todo Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Todo Name">
+                        <label for="form-name-input" class="form-label">Todo Name</label>
+                        <input type="text" class="form-control" id="form-name-input" placeholder="Todo Name">
                       </div>
                       <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Todo Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Todo Description"></textarea>
+                        <label for="form-description-input" class="form-label">Todo Description</label>
+                        <textarea class="form-control" id="form-description-input" rows="3" placeholder="Todo Description"></textarea>
                     </div>
-                        <button class="btn btn-primary">Submit</button>
+                        <button onclick="addTodo(); return false;" class="btn btn-primary">Add</button>
                 </form>
             </div>
             <div class="col">
+                <div class="container">
                 <h3>Todos</h3>
                 <table class="table">
                     <thead>
@@ -36,6 +37,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -43,14 +45,23 @@
                         <th scope="row">1</th>
                         <td>Clean Room</td>
                         <td>Just clean the room</td>
+                        <td>
+                          <button onclick="deleteTodo(1)" class="btn btn-danger">Delete</button>
+                          <button onclick="editTodo(1)" class="btn btn-secondary">Edit</button>
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">2</th>
                         <td>Train in a gym</td>
                         <td>I need to train to loose some weight</td>
+                        <td>
+                          <button onclick="deleteTodo(2)" class="btn btn-danger">Delete</button>
+                          <button onclick="editTodo(1)" class="btn btn-secondary">Edit</button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
             </div>
         </div>
       </div>
