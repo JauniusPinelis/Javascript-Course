@@ -20,12 +20,16 @@
                     <div class="mb-3">
                         <label for="form-name-input" class="form-label">Todo Name</label>
                         <input type="text" class="form-control" id="form-name-input" placeholder="Todo Name">
-                      </div>
+                    </div>
                       <div class="mb-3">
                         <label for="form-description-input" class="form-label">Todo Description</label>
                         <textarea class="form-control" id="form-description-input" rows="3" placeholder="Todo Description"></textarea>
                     </div>
-                        <button onclick="addTodo(); return false;" class="btn btn-primary">Add</button>
+
+                      <input type="hidden" id="update-index-input" value="">
+
+                      <button onclick="addTodo(); return false;" class="btn btn-primary add-button">Add</button>
+                      <button style="display: none;" onclick="updateTodo(); return false;" class="btn btn-primary update-button">Update</button>
                 </form>
             </div>
             <div class="col">
@@ -43,20 +47,20 @@
                     <tbody>
                       <tr>
                         <th scope="row">1</th>
-                        <td>Clean Room</td>
-                        <td>Just clean the room</td>
+                        <td class="todo-name">Clean Room</td>
+                        <td class="todo-description">Just clean the room</td>
                         <td>
                           <button onclick="deleteTodo(1)" class="btn btn-danger">Delete</button>
-                          <button onclick="editTodo(1)" class="btn btn-secondary">Edit</button>
+                          <button onclick="activateEditMode(1)" class="btn btn-secondary">Edit</button>
                         </td>
                       </tr>
                       <tr>
                         <th scope="row">2</th>
-                        <td>Train in a gym</td>
-                        <td>I need to train to loose some weight</td>
+                        <td class="todo-name">Train in a gym</td>
+                        <td class="todo-description">I need to train to loose some weight</td>
                         <td>
                           <button onclick="deleteTodo(2)" class="btn btn-danger">Delete</button>
-                          <button onclick="editTodo(1)" class="btn btn-secondary">Edit</button>
+                          <button onclick="activateEditMode(2)" class="btn btn-secondary">Edit</button>
                         </td>
                       </tr>
                     </tbody>
