@@ -1,0 +1,7 @@
+This is going to be a shop application.
+
+We are will be creating a interactive website (Html + css + Javascript)
+, but in this project we will be using a special library (json server) to simulate the back-end api. This means that all the data wil be stored in back-end (json server) and front-end will make the calls to get/edit the data.
+
+The shop will have several items. Those items have name, description, price, quantity.
+We will have a concept of user. User has money and is able to buy those items. Once those items are bought, the website should display that those items belong to user. If the users cannot afford mix of items price * quantity, he /she should ne be able to buy it. Once User has bought the items (quantity gets to zero), the item should be displayed.
