@@ -1,0 +1,29 @@
+{
+  "items":[
+      {
+          "id":1,
+          "name": "Some item"
+      }
+  ],  
+  "posts": [
+    {
+      "id": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Created with Postman",
+      "author": "Jaunius Pinelis",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
