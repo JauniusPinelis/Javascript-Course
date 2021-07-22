@@ -1,29 +1,20 @@
 {
-  "items":[
-      {
-          "id":1,
-          "name": "Some item"
-      }
-  ],  
-  "posts": [
+  "user": {
+    "money": 200,
+    "items": []
+  },
+  "shopItems":[
+    {
+        "id": 1,
+        "name": "Candy",
+        "price": 2,
+        "quantity": 8
+    },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 3,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "title": "Created with Postman",
-      "author": "Jaunius Pinelis",
-      "id": 4
+      "name": "Ice cream",
+      "price": 4,
+      "quantity": 3
     }
-  ],
-  "comments": [],
-  "profile": {
-    "name": "typicode"
-  }
+  ] 
 }

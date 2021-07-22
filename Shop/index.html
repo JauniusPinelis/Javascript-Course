@@ -17,8 +17,19 @@
       <div class="container mt-3">
         <div class="row">
           <div class="col">
-            <h3>User information</h3>
-            <h4>Money: <span id="money"></span> </h4>
+            <h3 class="mb-3">User information</h3>
+            <h4 class="mb-3">Money: <span id="money"></span> </h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody id="user-items-body">
+              </tbody>
+            </table>
           </div>
           <div class="col">
             <h3>Shop Items</h3>
