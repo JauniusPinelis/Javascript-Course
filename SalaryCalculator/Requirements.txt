@@ -1,0 +1,6 @@
+We will create to a program which allows use manage employee salaries.
+Salaries will be per hour rate, and we will need to specify how many hours a week the person works. The program should display everyones monthlySalary.
+Every employee should have also name, surname.
+
+I should be able to add new employee
+I should be able to delete an employee
