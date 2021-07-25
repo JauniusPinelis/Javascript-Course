@@ -1,20 +1,33 @@
 {
   "user": {
-    "money": 200,
-    "items": []
-  },
-  "shopItems":[
-    {
+    "items": [
+      {
         "id": 1,
         "name": "Candy",
-        "price": 2,
-        "quantity": 8
+        "quantity": 11
+      }
+    ],
+    "money": 50
+  },
+  "userItems": [
+    {
+      "id": 1,
+      "name": "Candy",
+      "quantity": 10
+    }
+  ],
+  "shopItems": [
+    {
+      "id": 1,
+      "name": "Candy",
+      "price": 50,
+      "quantity": 4
     },
     {
       "id": 2,
       "name": "Ice cream",
       "price": 4,
-      "quantity": 3
+      "quantity": 10
     }
-  ] 
+  ]
 }
