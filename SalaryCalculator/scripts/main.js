@@ -8,7 +8,7 @@ let employees = [
     new Employee("Sean", "Paul")
 ];
 
-DomHelpers.renderEmployeesTable(employees);
+DomHelpers.renderEmployeesTable(employees, updateEmployeeValues);
 
 function addNewEmployee(){
     let firstName = document.querySelector("#first-name-input").value;
@@ -17,7 +17,15 @@ function addNewEmployee(){
     let newEmployee = new Employee(firstName, lastName);
 
     employees.push(newEmployee);
-    DomHelpers.renderEmployeesTable(employees);
+    DomHelpers.renderEmployeesTable(employees, updateEmployeeValues);
+}
+
+function updateEmployeeValues(employees, element){
+    console.log("onChangeFunc works");
+    let classNames = element.className.split(" ");
+    let employee = employees.filter((e) => e.id == classNames[1])[0];
+    
+    employee.updateValues(classNames[0], element.value);
 }
 
 window.addNewEmployee = addNewEmployee;

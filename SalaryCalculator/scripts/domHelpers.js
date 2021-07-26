@@ -14,7 +14,7 @@ function renderEmployeesTable(employees) {
               employee.id
             }" value="${employee.getWorkingHours()}"></td>
             <td><h4>${employee.getSalary()}</h4></td>
-            <td><button type="button" class="btn btn-danger">Delete</button></td>
+            <td><button name="${employee.id}" type="button" class="btn btn-danger">Delete</button></td>
         </tr>
         
         `;
@@ -23,28 +23,34 @@ function renderEmployeesTable(employees) {
   document.querySelector("#employees-table-body").innerHTML = bodyHtml;
 }
 
-let addEventListeners = (employees) => {
+function addEventListeners (employees, onChangeFunc) {
     let elements = document.querySelectorAll('input[type="number"]');
     elements.forEach((element) => {
       element.addEventListener("change", () => {
 
-        updateValues(employees, element);
+        onChangeFunc(employees, element);
 
-        DomHelpers.renderEmployeesTable(employees);
+        DomHelpers.renderEmployeesTable(employees, onChangeFunc);
       });
     });
+
+    let deleteButtons = window.document.querySelectorAll("button.btn.btn-danger");
+
+    deleteButtons.forEach((element) => {
+      element.addEventListener("click", () => {
+
+        employees = employees.filter(e => e.id != element.getAttribute('name'));
+
+        DomHelpers.renderEmployeesTable(employees, onChangeFunc);
+      })
+    })
 }
 
-function updateValues(employees, element){
-    let classNames = element.className.split(" ");
-    let employee = employees.filter((e) => e.id == classNames[1])[0];
-    
-    employee.updateValues(classNames[0], element.value);
-}
+
 
 export class DomHelpers {
-  static renderEmployeesTable(employees) {
+  static renderEmployeesTable(employees, onchangeFunc) {
     renderEmployeesTable(employees);
-    addEventListeners(employees);
+    addEventListeners(employees, onchangeFunc);
   }
 }
