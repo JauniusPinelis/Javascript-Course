@@ -3,7 +3,11 @@ import {
   ballMovementDirections,
   defaultDirection
 } from "./configuration.js";
-import { ballMove, processKeyPress, intersects, changeDirection } from "./functions.js";
+import { 
+    ballMove, processKeyPress, 
+    intersects, changeDirection,
+    trackBall, moveUp, moveDown, refreshScore
+} from "./functions.js";
 import {
   getPlayerObject,
   getComputerObject,
@@ -23,13 +27,15 @@ ballObject.intersects = intersects;
 ballObject.changeDirection = changeDirection;
 ballObject.direction = defaultDirection;
 
+opponentObject.moveUp = moveUp;
+opponentObject.moveDown = moveDown;
+opponentObject.trackBall = trackBall;
+
+
 
 two.update();
 
-launchBall();
-
 function launchBall() {
-  console.log("Ball move");
 
   let direction =
     ballMovementDirections[
@@ -38,10 +44,13 @@ function launchBall() {
 
   ballObject.direction.vertical = direction.vertical;
   ballObject.direction.horizontal = direction.horizontal;
+  ballObject.moving = true;
 
   window.setInterval(function () {
-    ballObject.move(layoutConfig, playerObject);
+    ballObject.move(layoutConfig, playerObject, opponentObject);
+    opponentObject.trackBall(ballObject, layoutConfig);
     two.update();
+    refreshScore(playerObject.score, opponentObject.score);
   }, 10);
 }
 
@@ -52,9 +61,15 @@ ballObject.move = ballMove;
 // });
 
 playerObject.processKeyPress = processKeyPress;
+playerObject.moveUp = moveUp;
+playerObject.moveDown = moveDown;
 
 $(document).keydown(function (e) {
   playerObject.processKeyPress(e, layoutConfig);
 
   two.update();
+});
+
+$("#start-game").click(function() {
+  launchBall();
 });
