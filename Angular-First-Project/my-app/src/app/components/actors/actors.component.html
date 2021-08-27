@@ -1,0 +1,8 @@
+<h2>Favorite Actors</h2>
+
+<h3>Selected actor is {{selectedActor?.name}}</h3>
+
+<ul *ngFor="let actor of actors">
+    <li><span>{{actor.name}}</span> {{actor.surname}}
+    </li>
+</ul>
