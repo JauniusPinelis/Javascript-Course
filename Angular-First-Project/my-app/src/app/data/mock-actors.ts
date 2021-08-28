@@ -1,6 +1,6 @@
 import { Actor } from "../models/actor";
 
-export const actors: Actor[] = [
+export const actorsData: Actor[] = [
     { name: "Tom", surname: "Cruise"},
     { name: "Angelina", surname: "Jolie"},
     { name: "Tom", surname: "Hanks"},

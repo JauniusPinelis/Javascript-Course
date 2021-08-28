@@ -6,12 +6,14 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ActorComponent } from './components/actor/actor.component';
 import { ActorsComponent } from './components/actors/actors.component';
+import { AddActorComponent } from './components/add-actor/add-actor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActorComponent,
-    ActorsComponent
+    ActorsComponent,
+    AddActorComponent
   ],
   imports: [
     BrowserModule,

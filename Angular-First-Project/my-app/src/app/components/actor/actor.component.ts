@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  Input,  OnInit } from '@angular/core';
 import { Actor } from 'src/app/models/actor';
+import { ActorsService } from 'src/app/services/actors.service';
 
 @Component({
   selector: 'app-actor',
@@ -7,11 +8,10 @@ import { Actor } from 'src/app/models/actor';
   styleUrls: ['./actor.component.css']
 })
 export class ActorComponent implements OnInit {
-  public info: Actor = {
-    name: "Tom",
-    surname: "Cruise"
-  };
-  constructor() { }
+  @Input() actorDecorator? : Actor
+ 
+  constructor() {
+   }
 
   ngOnInit(): void {
   }

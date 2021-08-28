@@ -1,8 +1,12 @@
 <h2>Favorite Actors</h2>
 
-<h3>Selected actor is {{selectedActor?.name}}</h3>
+<h3 *ngIf="selectedActor != null">Selected actor is {{selectedActor?.name}} {{selectedActor?.surname}}</h3>
+<div class="container">
 
-<ul *ngFor="let actor of actors">
-    <li><span>{{actor.name}}</span> {{actor.surname}}
+
+<ul class="list-group" *ngFor="let actor of actors">
+    <li [class]="actor === selectedActor ? 'list-group-item active' : 'list-group-item'" (click) = "onSelect(actor)">
+        <app-actor [actorDecorator] = "actor"></app-actor>
     </li>
 </ul>
+</div>
