@@ -1,0 +1,12 @@
+Observables is a part of RxJs library.
+
+Observables are based on streaming.
+Observable is a function which is assigned to the source (which creates data) and then it creates what is called Observer
+
+Observer is that object that you you to interace with the observable.
+This has next(), error(), completed() methods that will be called to interact.
+
+Subscription -> which we use to suscribe and cancel subscription()
+
+
+

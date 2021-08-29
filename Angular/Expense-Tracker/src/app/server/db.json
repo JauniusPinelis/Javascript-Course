@@ -1,0 +1,47 @@
+{
+  "expenses": [
+    {
+      "id": 1,
+      "amount": 2.15,
+      "category": "food"
+    },
+    {
+      "id": 2,
+      "amount": 250,
+      "category": "rent"
+    },
+    {
+      "id": 3,
+      "amount": 10,
+      "category": "leisure"
+    },
+    {
+      "amount": 5.54,
+      "category": "Food",
+      "id": 4
+    },
+    {
+      "amount": 55,
+      "category": "Housing",
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Food"
+    },
+    {
+      "id": 2,
+      "name": "Housing"
+    },
+    {
+      "id": 3,
+      "name": "Leisure"
+    },
+    {
+      "id": 4,
+      "name": "Self-development"
+    }
+  ]
+}
