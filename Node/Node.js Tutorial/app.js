@@ -9,12 +9,19 @@ var app = express();
 app.use(express.json())  
 
 app.get('/employee', (req, res) => {
-   
-     res.send(`Test`);
+     //Getting the data
+     var employees = employeeFileWriter.getAllEmployees();
+     // Transforming the data so it can be printed
+     var employeesFormatted = "";
+     employees.forEach(employee => {
+      employeesFormatted += `${employee.firstName} ${employee.lastName}\n`
+     })
+     // Sending data back
+     res.send(employeesFormatted);
 })
 
 app.post('/employee', (req, res) => {
-    employeeFileWriter.writeFile(req.body);
+    employeeFileWriter.writeEmployee(req.body);
     res.send("You have used post");
 })
 

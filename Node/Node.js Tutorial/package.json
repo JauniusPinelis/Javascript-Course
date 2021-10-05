@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -e * app.js"
+    "dev": "nodemon --watch src app.js"
   },
   "author": "",
   "license": "ISC",
