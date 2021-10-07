@@ -13,23 +13,24 @@ class EmployeeFileWriter {
         var dataDirectory = path.join(__dirname, '../')
         var fileDirectory = path.join(dataDirectory, '/data/employees.txt')
 
-        // var lineReader = require('readline').createInterface({
-        //     input: require('fs').createReadStream(fileDirectory)
-        // });
-
-        var employees = []
+        var employees = [];
           
-        //   lineReader.on('line', function (line) {
-        //     var lineData = line.split(' ');
-        //     var employee = {
-        //         firstName: lineData[1],
-        //         lastName: lineData[2]
-        //     };
-        //     //console.log('Line from file:', line);
-        //     employees.push(employee);
-        //   });
+        var fileData = fs.readFileSync(fileDirectory, 'utf8');
 
-        var fileData = await fs.readFile(fileDirectory);
+        var lines = fileData.split('\n');
+
+        lines.forEach((line) => {
+            var lineElements = line.split(' ');
+
+            var employeeObject = {
+                id : lineElements[0],
+                firstName: lineElements[1],
+                lastName: lineElements[2]
+            };
+
+            employees.push(employeeObject);
+        })
+        return employees;
     }
 
     writeEmployee(employee){

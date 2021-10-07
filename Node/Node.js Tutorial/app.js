@@ -12,12 +12,13 @@ app.get('/employee', (req, res) => {
      //Getting the data
      var employees = employeeFileWriter.getAllEmployees();
      // Transforming the data so it can be printed
-     var employeesFormatted = "";
-     employees.forEach(employee => {
-      employeesFormatted += `${employee.firstName} ${employee.lastName}\n`
-     })
+     
+    //  var employeesFormatted = "";
+    //  employees.forEach(employee => {
+    //   employeesFormatted += `${employee.firstName} ${employee.lastName}\n`
+    //  })
      // Sending data back
-     res.send(employeesFormatted);
+     res.json(employees);
 })
 
 app.post('/employee', (req, res) => {
