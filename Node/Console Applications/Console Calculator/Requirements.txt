@@ -1,0 +1,13 @@
+Console Calculator Project:
+
+We specify a string togethet with the console. For example:
+running:
+'node app.js 3+5' should print '5'
+'node app.js 5*0' should print '0'
+'node app.js 5 * 0' should print '0'
+
+So the application takes two inputs and an operator sign between them
+The application should support sum (+), subtract (-), multiply (*) and
+division (/)
+
+If the command cannot be parsed "The expression cannot be parsed" should be printed
