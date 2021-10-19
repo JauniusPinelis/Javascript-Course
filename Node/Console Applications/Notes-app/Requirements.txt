@@ -1,4 +1,5 @@
 This is going to be a console application again.
 The application functionality is about Notes management: you are able to 
 add, remove, list, read. (CRUD with update)
-A note is compose of title and body. 
+A note is compose of title (string) and body (string).
+We will be storing the data in .json files 
