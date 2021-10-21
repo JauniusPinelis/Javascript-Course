@@ -2,27 +2,68 @@ const fs = require('fs');
 const chalk = require('chalk');
 
 function createNote(argv){
+    // load the existing notes as an array
+    var notes = loadNotes();
+    // push the new note into the array
+    var dublicateNote = notes.find(note => note.title == argv.title);
 
-    var note = {
-        title: argv.title,
-        body: argv.body
-    };
+    if (dublicateNote == null){
+        notes.push({
+            title: argv.title,
+            body: argv.body
+        });
+    
+        // overwrite the file with the new array
+        saveNotes(notes);
 
-    saveNotes(note);
+        console.log(chalk.greenBright("Note was added"));
+    }
+    else {
+        console.log(chalk.redBright("Note already exists"));
+    }
 }
 
 function listNotes(){
-    var note = loadNotes();
-    console.log(`Note title: ${note.title}, body: ${note.body}`)
-    return [];
+    var notes = loadNotes();
+    if (notes.length == 0){
+        console.log("No notes");
+    }
+    notes.forEach(note => {
+        var outputText = `Note title: ${note.title}, body: ${note.body}`;
+        console.log(chalk.blueBright(outputText));
+    });
+    return notes;
 }
 
-function readNote(){
-    return {};
+const readNote = (title) => {
+    var notes = loadNotes();
+    var note = notes.find(note => note.title == title);
+
+    if (!note){
+        var output = `Note title: ${note.title}, body: ${note.body}`;
+        console.log(chalk.blueBright(output));
+    } else {
+        console.log(chalk.redBright("Note not found"));
+    }
 }
 
-const removeNote = () => {
+const removeNote = (title) => {
+    // load the notes into array in javascript
+    var notes = loadNotes();
 
+    var note = notes.find(note => note.title == title);
+    
+    if (!note){
+        console.log(chalk.red("Not not found"));
+        return;
+    }
+     // remove the note from the array
+     notes = notes.filter(note => note.title != title);
+
+    //save the array to the file
+    saveNotes(notes);
+
+    console.log(chalk.greenBright("Note removed"));
 }
 
 const saveNotes = (notes) => {
@@ -35,10 +76,15 @@ const saveNotes = (notes) => {
 const loadNotes = () => {
     const buffer = fs.readFileSync('./data/notes.json');
     const jsonData = buffer.toString();
+    if (jsonData == ""){
+        return [];
+    }
     return JSON.parse(jsonData);
 }
 
 module.exports = {
     createNote,
-    listNotes
+    listNotes,
+    readNote,
+    removeNote
 }

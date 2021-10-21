@@ -1,7 +1,7 @@
 var chalk = require('chalk');
 const yargs = require('yargs');
 
-const { createNote, listNotes } = require("./notes")
+const { createNote, listNotes, readNote, removeNote } = require("./notes")
 
 yargs.version("1.0.0");
 
@@ -45,8 +45,8 @@ yargs.command({
             type: 'string'
         }
     },
-    handlers(argv){
-        console.log(argv.title)
+    handler(argv){
+        removeNote(argv.title);
     }
 })
 
@@ -62,7 +62,7 @@ yargs.command({
         }
     },
     handler(argv){
-        console.log(argv);
+        readNote(argv.title);
     }
 })
 

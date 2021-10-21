@@ -1,5 +1,6 @@
 This is going to be a console application again.
 The application functionality is about Notes management: you are able to 
 add, remove, list, read. (CRUD with update)
+Adding with the same note title should error "Note already exists"
 A note is compose of title (string) and body (string).
 We will be storing the data in .json files 
