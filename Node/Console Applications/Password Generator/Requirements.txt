@@ -1,0 +1,5 @@
+Console based Password Generator using 'Commander' npm package
+The program will allows you to pick a specific length Password
+and also allow to create password without numbers or without symbols.
+
+The program should also allow writing the password into a file.
