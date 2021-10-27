@@ -33,6 +33,12 @@ app.get('/contacts', (req,res) => {
     }); 
 })
 
-app.listen(3333, () => {
-    console.log(`the application is running on port ${3333}`)
+app.get('*', (req, res) => {
+    res.render('notfound', {
+        title: "The page was not found"
+    });
+});
+
+app.listen(3000, () => {
+    console.log(`the application is running on port ${3000}`)
 })
