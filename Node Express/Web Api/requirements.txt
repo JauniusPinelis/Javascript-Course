@@ -1,0 +1,12 @@
+We will be creating a web api for users management with the following endpoints:
+CRUD -> Create, Read, Update, Delete
+
+Method      Url         Action
+GET         /users      Gets all users
+GET         /users/:id  get users by id
+
+POST        /users      Add a new user
+PUT         /users/:id  Updates users by id (overwrites)
+
+DELETE      /users      Deletes all users
+DELETE      /users/:id  Delete users by id
