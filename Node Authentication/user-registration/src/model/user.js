@@ -8,6 +8,17 @@ userSchema = new mongoose.Schema({
     token: {type: String }
 })
 
+userSchema.methods.toJSON = function() {
+    const user = this.toObject();
+    user.id = user._id;
+
+    delete user._id;
+    delete user.password;
+    delete user.__v;
+    
+    return user;
+}
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
