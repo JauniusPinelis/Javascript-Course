@@ -20,6 +20,6 @@ db.mongoose = mongoose;
 db.user = require('../models/user.model');
 db.role = require('../models/role.model');
 
-db.roles = ["user", "admin", "moderator"];
+db.roles = ["User", "Admin", "Moderator"];
 
 module.exports = db;
