@@ -3,6 +3,7 @@ const User = db.user;
 const Role = db.role;
 
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const signup = async (req, res) => {
     const {username, email, password, roles} = req.body;
@@ -59,7 +60,32 @@ const signup = async (req, res) => {
 }
 
 const signin = async (req, res) => {
-    res.send("Signin");
+    const {username, password} = req.body;
+
+    if (!username || !password) {
+        return res.status(400).send({
+            message: "Username and password are required"
+        });
+    }
+
+    var user = await User.findOne({username});
+    if (!user && await bcrypt.compare(password, user.password)) {
+        return res.status(400).send({
+            message: "Username or password is incorrect"
+        });
+    };
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+
+    user.token = token;
+
+    const userDto = {
+        username: user.username,
+        email: user.email,
+        token: user.token,
+    }
+
+    return res.send(userDto);
 }
 
 exports.signup = signup;
