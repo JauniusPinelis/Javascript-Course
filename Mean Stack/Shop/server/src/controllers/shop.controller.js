@@ -1,10 +1,11 @@
 const { getShops, createShop } = require("../services/shop.service");
 
-const createShopHandler = (req, res) => {
+const createShopHandler = async (req, res) => {
     try {
-        const shopId = createShop(req.body);
+        //TODO: validation
+        const shopId = await createShop(req.body);
 
-        res.status(200).json({
+        res.status(201).json({
             message: 'Shop created successfully',
             shopId: shopId
         });
@@ -18,11 +19,18 @@ const createShopHandler = (req, res) => {
    
 }
 
-const getShopsHandler = (req, res) => {
-    // the logic to get all shops
-    res.status(200).json({
-        message: 'Shops retrieved successfully'
-    });
+const getShopsHandler = async (req, res) => {
+    try {
+        const shops = await getShops();
+        //TODO: remap model to dtos (Data Transfer Objects)
+
+        res.status(200).send(shops);
+    }
+    catch(err){
+        res.status(500).send({
+            message: 'Error getting shops'
+        })
+    }
 }
 
 module.exports = {

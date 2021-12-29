@@ -6,6 +6,8 @@ dotenv.config();
 
 var app = express();
 
+app.use(express.json());
+
 registerRoutes(app);
 
 module.exports = app;
