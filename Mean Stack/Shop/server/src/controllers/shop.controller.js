@@ -1,4 +1,4 @@
-const { getShops, createShop } = require("../services/shop.service");
+const { getShops, createShop, removeShop, getShopById } = require("../services/shop.service");
 
 const createShopHandler = async (req, res) => {
     try {
@@ -19,6 +19,26 @@ const createShopHandler = async (req, res) => {
    
 }
 
+const removeShopHandler = async (req, res) => {
+    try {
+        var shopId = req.params.id;
+
+        shop = await getShopById(shopId);
+        if (shop == null) {
+            res.status(404).send({
+                message: 'Shop not found'
+            });
+        }
+
+        await removeShop(shopId);
+
+        res.status(204).send();
+    }
+    catch(err){ res.status(500).send({
+        message: 'Error deleting the shop'
+    })}
+}
+
 const getShopsHandler = async (req, res) => {
     try {
         const shops = await getShops();
@@ -35,5 +55,6 @@ const getShopsHandler = async (req, res) => {
 
 module.exports = {
     createShopHandler,
-    getShopsHandler
+    getShopsHandler,
+    removeShopHandler
 }

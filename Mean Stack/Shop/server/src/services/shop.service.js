@@ -1,5 +1,9 @@
 const shopModel = require('../models/shop.model');
 
+const getShopById = async (id) => {
+    var shop = await shopModel.findById(id);
+    return shop;
+}
 
 const createShop = async (request) => {
     var shop = new shopModel();
@@ -10,6 +14,10 @@ const createShop = async (request) => {
     await shop.save();
 
     return shop._id;
+}
+
+const removeShop = async (id) => {
+    await shopModel.findByIdAndDelete(id);
 }
 
 const getShops = async () => {
@@ -32,5 +40,7 @@ const getShops = async () => {
 
 module.exports = {
     createShop,
-    getShops
+    getShops,
+    removeShop,
+    getShopById
 }
