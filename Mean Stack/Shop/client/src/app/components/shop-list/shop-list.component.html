@@ -7,6 +7,7 @@
         <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">CreatedUtc</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
         <td >{{shop.id}}</td>
         <td>{{shop.name}}</td>
         <td>{{shop.createdUtc}}</td>
+        <td><button (click)="removeShop(shop.id)" class="btn btn-danger">Remove</button></td>
       </tr>
     </tbody>
   </table>

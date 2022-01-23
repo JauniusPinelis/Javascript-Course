@@ -21,4 +21,8 @@ export class ShopService {
   public CreateShop(createShop: CreateShop): Observable<string>{
     return this.httpClient.post<string>(this.server_url, createShop);
   }
+
+  public removeShop(id: string): Observable<any>{
+    return this.httpClient.delete<any>(`${this.server_url}/${id}`);
+  }
 }

@@ -6,7 +6,8 @@ import { CreateShopComponent } from './components/create-shop/create-shop.compon
 
 const routes: Routes = [
   { path: 'shops', component: ShopListComponent },
-  { path: 'create-shop', component: CreateShopComponent }
+  { path: 'create-shop', component: CreateShopComponent },
+  { path: '', redirectTo: '/shops', pathMatch: 'full' }
 ];
 
 @NgModule({
