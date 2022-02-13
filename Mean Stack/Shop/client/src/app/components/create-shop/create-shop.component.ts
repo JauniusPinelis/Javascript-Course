@@ -11,6 +11,7 @@ import CreateShop from 'src/models/create-shop.model';
 export class CreateShopComponent implements OnInit {
 
   public shopName: string = '';
+  public errorMessage: string = '';
 
   constructor(
     private shopService:ShopService, 
@@ -22,6 +23,10 @@ export class CreateShopComponent implements OnInit {
 
   public createShop(): void {
     // TODO: validation
+    if (this.shopName.length == 0) {
+      this.errorMessage = 'Shop name is required';
+      return;
+    }
 
     // create shop model
     const createShop: CreateShop = {

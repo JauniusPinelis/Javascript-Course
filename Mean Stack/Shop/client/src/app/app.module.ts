@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreateShopComponent } from './components/create-shop/create-shop.component';
+import { EditShopComponent } from './components/edit-shop/edit-shop.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreateShopComponent } from './components/create-shop/create-shop.compon
     ShopListComponent,
     NavBarComponent,
     FooterComponent,
-    CreateShopComponent
+    CreateShopComponent,
+    EditShopComponent
   ],
   imports: [
     BrowserModule,
