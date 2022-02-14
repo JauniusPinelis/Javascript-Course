@@ -5,6 +5,24 @@ const getShopById = async (id) => {
     return shop;
 }
 
+const updateShop = async (id, body) => {
+
+    await shopModel.findByIdAndUpdate(id, body);
+
+    var updatedShop = shopModel.findById(id);
+
+    var updatedShopObject = updatedShop.toJSON();
+
+    var updatedShopDto = {
+        id: updatedShopObject._id,
+        name: updatedShopObject.name,
+        description: updatedShopObject.description,
+        createdUtc: updatedShopObject.createdUtc,
+    }
+
+    return updatedShopDto;
+}
+
 const createShop = async (request) => {
     var shop = new shopModel();
 
@@ -29,6 +47,7 @@ const getShops = async () => {
         const dto = {
             id: shopEntity._id,
             name: shopEntity.name,
+            description: shopEntity.description,
             createdUtc: shopEntity.createdUtc,
         }
 
@@ -42,5 +61,6 @@ module.exports = {
     createShop,
     getShops,
     removeShop,
-    getShopById
+    getShopById,
+    updateShop
 }
