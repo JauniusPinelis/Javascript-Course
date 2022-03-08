@@ -1,0 +1,34 @@
+
+<div class="container-fluid">
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">CreatedUtc</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let shop of shops">
+        <td >{{shop.id}}</td>
+        <td>{{shop.name}}</td>
+        <td>{{shop.createdUtc}}</td>
+        <td>
+          <div class="divider">
+            <button (click)="displayEdit(shop)" class="btn btn-secondary">Edit</button>
+            <button (click)="removeShop(shop.id)" class="btn btn-danger">Remove</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ <div *ngIf="isEditDisplayed">
+    <app-edit-shop [shop] = "editShop" (updateShopEvent)="updateShop($event)"></app-edit-shop>
+ </div>
+ <div *ngIf="editMessage != ''" [ngClass]="[editMessage == 'Success' ? 'alert alert-success' : 'alert alert-danger']" role="alert">
+  {{editMessage}}
+</div>
+
+</div>

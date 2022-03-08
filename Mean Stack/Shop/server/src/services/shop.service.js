@@ -9,7 +9,7 @@ const updateShop = async (id, body) => {
 
     await shopModel.findByIdAndUpdate(id, body);
 
-    var updatedShop = shopModel.findById(id);
+    var updatedShop = await shopModel.findById(id);
 
     var updatedShopObject = updatedShop.toJSON();
 

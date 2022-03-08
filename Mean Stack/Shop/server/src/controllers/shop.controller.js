@@ -9,9 +9,9 @@ const updateShopHandler = async (req, res) => {
 
         res.status(200).send(updatedShop);
     }
-    catch (errorMessage) {
+    catch (error) {
         res.status(500).json({
-            message: 'Error updating shop'
+            message: error.message
         });
     }
 }

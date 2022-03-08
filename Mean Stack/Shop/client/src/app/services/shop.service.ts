@@ -4,6 +4,7 @@ import Shop from 'src/models/shop.model';
 import { Observable } from 'rxjs';
 import CreateShop from 'src/models/create-shop.model';
 import { Router } from '@angular/router';
+import UpdateShop from 'src/models/update-shop.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,9 @@ export class ShopService {
 
   public removeShop(id: string): Observable<any>{
     return this.httpClient.delete<any>(`${this.server_url}/${id}`);
+  }
+
+  public updateShop(id: string, updateShop: UpdateShop){
+    return this.httpClient.put(`${this.server_url}/${id}`, updateShop);
   }
 }

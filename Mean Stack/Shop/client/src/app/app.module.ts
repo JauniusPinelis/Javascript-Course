@@ -4,12 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ShopListComponent } from './components/shop-list/shop-list.component';
+import { ShopListComponent } from './components/shop/shop-list/shop-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CreateShopComponent } from './components/create-shop/create-shop.component';
-import { EditShopComponent } from './components/edit-shop/edit-shop.component';
+import { CreateShopComponent } from './components/shop/create-shop/create-shop.component';
+import { EditShopComponent } from './components/shop/edit-shop/edit-shop.component';
+import { ShopTableRowComponent } from './components/shop/shop-table-row/shop-table-row.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditShopComponent } from './components/edit-shop/edit-shop.component';
     NavBarComponent,
     FooterComponent,
     CreateShopComponent,
-    EditShopComponent
+    EditShopComponent,
+    ShopTableRowComponent
   ],
   imports: [
     BrowserModule,

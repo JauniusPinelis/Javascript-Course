@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ShopListComponent } from './components/shop-list/shop-list.component';
-import { CreateShopComponent } from './components/create-shop/create-shop.component';
+import { ShopListComponent } from './components/shop/shop-list/shop-list.component';
+import { CreateShopComponent } from './components/shop/create-shop/create-shop.component';
 
 const routes: Routes = [
   { path: 'shops', component: ShopListComponent },
