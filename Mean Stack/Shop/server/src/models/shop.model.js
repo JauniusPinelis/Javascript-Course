@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const shopSchema = new mongoose.Schema({
     name: String,
     description: String,
-    createdUtc: Date
+    createdUtc: Date,
+    shopItems: [
+        {type: mongoose.Schema.Types.ObjectId, ref: 'ShopItem'}
+    ]
 });
 
 const shopModel = mongoose.model('Shop', shopSchema);

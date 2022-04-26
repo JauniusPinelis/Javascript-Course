@@ -11,10 +11,10 @@ function setPrice(num){
 const shopItemSchema = new mongoose.Schema({
     name: String,
     price: {type: Number, get: getPrice, set: setPrice },
-    shopId: String
+    shopId: {type: mongoose.Schema.Types.ObjectId, ref: 'Shop'}
 })
 
-const shopItemModel = new mongoose.model("Shopitem", shopItemSchema);
+const shopItemModel = new mongoose.model("ShopItem", shopItemSchema);
 
 module.exports = shopItemModel;
 
