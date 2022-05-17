@@ -1,4 +1,5 @@
 const { getShops, createShop, removeShop, getShopById, updateShop } = require("../services/shop.service");
+const { getShopItemsByShopId } = require("../services/shop-item.service");
 
 const updateShopHandler = async (req, res) => {
     try {
@@ -37,13 +38,17 @@ const createShopHandler = async (req, res) => {
 
 const getShopByIdHandler = async (req, res) => {
     try {
-        shop = await getShopById(shopId);
+        shop = await getShopById(req.params.id);
         if (shop == null) {
             res.status(404).send({
                 message: 'Shop not found'
             });
            return;
         }
+
+        // Getting the shop items
+        let shopItems = await getShopItemsByShopId(shop._id);
+        shop.shopItems = shopItems;
 
         res.status(200).send(shop);
     }
@@ -93,5 +98,6 @@ module.exports = {
     createShopHandler,
     getShopsHandler,
     removeShopHandler,
-    updateShopHandler
+    updateShopHandler,
+    getShopByIdHandler
 }

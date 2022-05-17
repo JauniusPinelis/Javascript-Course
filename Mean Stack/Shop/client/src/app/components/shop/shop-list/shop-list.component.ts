@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShopService } from 'src/app/services/shop.service';
-import Shop from 'src/models/shop.model';
-import UpdateShop from 'src/models/update-shop.model';
+import Shop from 'src/app/models/shop/shop.model';
+import UpdateShop from 'src/app/models/shop/update-shop.model';
 
 @Component({
   selector: 'app-shop-list',
@@ -27,7 +27,7 @@ export class ShopListComponent implements OnInit {
    
 
   ngOnInit(): void {
-    this.shopService.GetShops().subscribe((shops) => {
+    this.shopService.getAll().subscribe((shops) => {
       this.shops = shops;
     });
   }
@@ -39,7 +39,7 @@ export class ShopListComponent implements OnInit {
   
 
   public removeShop(id: string): void {
-    this.shopService.removeShop(id).subscribe(() =>
+    this.shopService.remove(id).subscribe(() =>
     {
       this.shops = this.shops.filter(shop => shop.id !== id);
     });
@@ -53,7 +53,7 @@ export class ShopListComponent implements OnInit {
       name: name
     }
 
-    this.shopService.updateShop(id,  updateShopBody).subscribe((successData) => {
+    this.shopService.update(id,  updateShopBody).subscribe((successData) => {
       let shopToUpdate = this.shops.find(s => s.id == id);
       if (shopToUpdate != null){
         shopToUpdate.name = updateShopBody.name

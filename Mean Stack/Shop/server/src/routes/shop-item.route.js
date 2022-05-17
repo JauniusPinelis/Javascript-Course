@@ -1,8 +1,9 @@
-const {getShopItemsHandler, createShopItemHandler} = require('../controllers/shop-item.controller');
+const {getShopItemsHandler, createShopItemHandler, deleteShopItemHandler} = require('../controllers/shop-item.controller');
 
 const registerShopItemRoutes = (app) => {
-    app.get('/shop-items', getShopItemsHandler);
-    app.post('/shop-items', createShopItemHandler);
+    app.get('/shop-item', getShopItemsHandler);
+    app.post('/shop-item', createShopItemHandler);
+    app.delete('/shop-item/:id', deleteShopItemHandler)
 }
 
 module.exports = registerShopItemRoutes;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShopService } from 'src/app/services/shop.service';
-import CreateShop from 'src/models/create-shop.model';
+import CreateShop from 'src/app/models/shop/create-shop.model';
 
 @Component({
   selector: 'app-create-shop',
@@ -34,7 +34,7 @@ export class CreateShopComponent implements OnInit {
     }
 
     // call the service to create shop
-    this.shopService.CreateShop(createShop).subscribe((data) => {
+    this.shopService.create(createShop).subscribe((data) => {
        // redirect to shops list
         this.router.navigate(['shops']);
     });

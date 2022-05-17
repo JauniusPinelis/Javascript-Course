@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CreateShopComponent } from './components/shop/create-shop/create-shop.component';
 import { EditShopComponent } from './components/shop/edit-shop/edit-shop.component';
 import { ShopTableRowComponent } from './components/shop/shop-table-row/shop-table-row.component';
+import { ShopItemListComponent } from './components/shop-item/shop-item-list/shop-item-list.component';
+import { CreateShopItemComponent } from './components/shop-item/create-shop-item/create-shop-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ShopTableRowComponent } from './components/shop/shop-table-row/shop-tab
     FooterComponent,
     CreateShopComponent,
     EditShopComponent,
-    ShopTableRowComponent
+    ShopTableRowComponent,
+    ShopItemListComponent,
+    CreateShopItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ShopService } from 'src/app/services/shop.service';
-import Shop from 'src/models/shop.model';
-import UpdateShop from 'src/models/update-shop.model';
+import Shop from 'src/app/models/shop/shop.model';
+import UpdateShop from 'src/app/models/shop/update-shop.model';
 
 @Component({
   selector: 'app-edit-shop',
