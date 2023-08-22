@@ -1,0 +1,5 @@
+We will create an application to query OpenGPT 3.5:
+1. Front-end in Angular which displays Chatbot to interact with backend.
+2. Front-end should have authentication and all backend should be protected by authentication.
+3. There should be a service which interacts with OpenAi provider and saves existing conversation in the database.
+4. Reloading the application should load the previous conversation.

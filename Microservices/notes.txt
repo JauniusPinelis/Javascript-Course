@@ -1,0 +1,28 @@
+1. Monolithic architecture.
+2. Microservices architecture
+3. Benefits:
+    1. Scalability (monolith are not that well scalable)
+    2. Easier deployments
+    3. Easier team development.
+4. Drawbacks: 
+    1. Complexity: Debugging, monitoring is harder.
+    2. Speed is reduced.
+
+5. Microservice concepts:
+    1. Gateway/proxy/bff:
+        - simplifies flow for the front-end.
+        - expose only relevant endpoints
+        - handle authentication, rate-limitting, caching
+    2. Each microservices has its own database (mini-database):
+        - Your data divided into different database
+        - easier scalability
+        - You can use appropriate database for each microservice.
+        - Running different databases locally could be a struggle.
+6. Messaging:
+    1. Request/Response
+    2. Publishers/Consumer pattern (asynchronous massaging).
+    3. Messaging gives us scalability, but also makes it more complex to debug.
+    4. The popular message broker is RabbitMQ
+7. Docker:
+    1. Simplifies launching local environment.
+    2. Introduces the copets of images and containers (will be need by kubernetes later one)

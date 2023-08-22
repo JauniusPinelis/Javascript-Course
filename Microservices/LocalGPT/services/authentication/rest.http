@@ -1,0 +1,26 @@
+GET http://localhost:3000/health
+
+###
+
+# endpoint for authentication
+# Endpoint returns jwt
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "t",
+    "password": "test"
+}
+
+###
+
+#endpoint for registration
+# Endpoint returns 201 (created)
+POST http://localhost:3000/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "email": "email@email",
+    "password": "test"
+}
