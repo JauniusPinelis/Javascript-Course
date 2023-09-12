@@ -8,8 +8,17 @@ POST http://localhost:3000/auth/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "t",
-    "password": "test"
+    "username": "test2",
+    "password": "test2"
+}
+
+###
+
+POST http://localhost:3000/auth/verify HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE2OTM0MjI5NTIsImV4cCI6MTY5MzQyNjU1Mn0.8lt_uvdF5cjJ8JuJHJgYhuvq5Z1LTeLjMWQwxITtFzQ"
 }
 
 ###
@@ -20,7 +29,7 @@ POST http://localhost:3000/auth/register HTTP/1.1
 content-type: application/json
 
 {
-    "username": "test",
+    "username": "test2",
     "email": "email@email",
-    "password": "test"
+    "password": "test2"
 }

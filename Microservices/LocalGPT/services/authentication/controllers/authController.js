@@ -13,6 +13,17 @@ async function signup(req,res,next){
   
 }
 
+async function verify(req, res, next){
+  try {
+    const {token} = req.body;
+    const result = await authService.verify(token);
+    res.json(result);
+  }
+  catch(err){
+    next(err);
+  }
+}
+
 async function login(req, res, next) {
   try {
     const { username, password } = req.body;
@@ -26,5 +37,6 @@ async function login(req, res, next) {
 
 module.exports = {
   signup,
-  login
+  login,
+  verify
 };

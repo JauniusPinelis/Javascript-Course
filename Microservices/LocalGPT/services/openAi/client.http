@@ -1,0 +1,10 @@
+@baseUrl = http://localhost:3000  // Change this to the actual base URL of your server
+
+### Request to /complete
+POST http://localhost:5000/complete
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE2OTM0MjI5NTIsImV4cCI6MTY5MzQyNjU1Mn0.8lt_uvdF5cjJ8JuJHJgYhuvq5Z1LTeLjMWQwxITtFzQ
+
+{
+  "input": "Test"
+}
