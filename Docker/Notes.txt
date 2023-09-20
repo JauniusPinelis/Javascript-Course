@@ -1,0 +1,3 @@
+What is Docker:
+A set of tools to help run, deploy, manage applications in containers.
+It is useful when you have more complex software setups.

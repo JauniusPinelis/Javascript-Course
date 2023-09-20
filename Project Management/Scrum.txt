@@ -1,0 +1,95 @@
+1. What is Scrum? It is a project management system.
+2. You can get certifications to be come a professional Scrum Expert.
+Scrum topics:
+
+Scrum Strengths: 
+    Estimation: product owners can estimate and promise certain features for shareholders.
+    Visibility: the development process is clearly visible to shareholders.
+
+Roles:
+    Developer: Traditional developer who are responsible for software implementation
+    Product owner: Maintaining the backlog, prioritising tasks and communicating between shareholder and developers.
+    Scrum master: The person who is responsible that the best Scrum practice are followed.
+    Stakeholder: person who has interest in the product.
+
+Key elements:
+    Backlog: a list of tasks that need to be implemented.
+    Product (project): the software that is being developed.
+    Epic: Big feature which consists of several user stories. 
+        Epic may take several sprints to complete.
+    User Story: Feature that needs to be implemented. 
+        It should not be a big task and it should be well documented.
+        Story should fit into a single sprint.
+    Sprint: an iteration of how often the software is updated. Usually sprint is 2 weeks. 
+    Stories should be implemented by the end of the sprint.
+    Grooming(or Refinement): Review/estimation/splitting of the ideas/epics/stories.
+
+
+Refinement:
+    0. One of the aims of refinement is that whole team understands the tasks.
+    1. Divide tasks/epics into smaller completable tasks.
+    2. Identity issues, blockers, uncertainties.
+
+Estimation
+    Estimation is one of the most complex parts.
+    Estimation is difficult.
+    There is no single best technique of how to estimate.
+    By default developers do relative estimation by hours
+    Usually developer has a 8-hour work day, but not all time is spent on development (documentation, meetings and etc)
+    Pessimistic estimation: add extra effort for uncertainties and issues.
+    Quite often Story Points are used for estimation.
+    Story points are measured by effort, complexity and risk. They are done by comparing the previous tasks.
+    With story points (or hours) you can measure the 'Capacity' of the team.
+    Every sprint product owner remeasure the capacity of the teams (of how much story point the team can get).
+    Together with estimation, capacity of teams, well-groomed backlog and priorities we can plan features way ahead.
+    Scrum allows to make more calculated and estimated promises to deliver to shareholders.
+    Planning poker is common technique to get accurate estimates.
+
+Planning:
+    The planning happens before every start of the sprint.
+    purpose of the planning is to move the tasks from backlog and starting the sprint.
+    Big discussion of which tasks should go into the sprint. 
+    The tasks get ordered in the sprint.
+    Developer team should be self-managing.
+    Sometimes developers assign the tasks to themselves in the planning. 
+    But the tasks should be assigned as sprint is runnings.
+    The team makes a commitment that the tasks in the sprint will be completed.
+    The team also defined the sprint goal.
+
+Sprint review (demo session):
+    Demonstrate what has been completed in this sprint.
+    It is important to share the knowledge of the product to product owner and shareholders.
+    Feedback and discussion are welcome.
+    Quite often this bit is skipped.
+
+Retrospective:
+    Very important meeting for developers to reflect how the sprint has gone and if something can be improved.
+    The process is similar to planning poker: You are give a period of time (usually 10 minutes)
+    to write about the following topics: 
+        1. What went well.
+        2. What did not go well.
+        3. What can be improved?
+        4. What is sabotaging the progress (what you did not like).
+    After 10 minutes the writing are revealed.
+    Quite often these writings are made anonymous. 
+    These writings (cards) get grouped and get discussed.
+
+    In this meeting, action items should be recorded.
+    In the next retro, these action items are reviewed.
+
+Daily standup:
+    This is one short meeting (usually 15 minutes) with no big discussions.
+    Every developer, product owner goes in a circle and state:
+        1. What they have been working on yesterday.
+        2. What they are going to do today.
+        3. Any blockers?
+        4. Any issues?
+
+
+    
+
+
+
+
+Scrum flow:
+

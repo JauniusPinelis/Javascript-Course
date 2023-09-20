@@ -26,12 +26,14 @@ export class AuthService {
 
   login(username: string, password: string): void {
     const credentials = { username, password };
-      this.http.post<any>(`${environment.authApiUrl}/auth/login`, credentials).subscribe((response) => {
-        const token: string = response.token;
-        this.saveToken(token);
-        this.router.navigate(["/chat"]);
-      }, (error) => {
-        console.log("Authentication failed")
+
+      this.http.post<any>(`${environment.authApiUrl}/auth/login`, credentials).subscribe({
+        next: (response) => {
+          const token: string = response.token;
+          this.saveToken(token);
+          this.router.navigate(["/chat"]);
+        },
+        error: () => {console.log("Authentication failed")}
       })
   }
 

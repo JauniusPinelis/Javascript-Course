@@ -18,11 +18,11 @@ export class ChatComponent {
     {text: "Hello to you again", user: "bot"}
   ];
 
-  sendMessage() {
+  async sendMessage() {
     if (this.userInput.trim() !== '') {
       this.messages.push({ text: this.userInput, user: 'user' });
 
-      const response = this.aiService.generateResponse(this.userInput);
+      const response = await this.aiService.generateResponse(this.userInput);
 
       this.messages.push({ text: response , user: 'bot' });
       this.userInput = '';
