@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: 'postgres',
   database: 'auth',
   password: 'postgres',
   port: 5432 // Your database port
@@ -19,6 +19,6 @@ async function executeQuery(sql, params) {
 }
 
 module.exports = {
-    executeQuery
+  executeQuery
 }
 

@@ -1,0 +1,53 @@
+
+Waterfall development model:
+    Initial traditional development framework
+    a sequential development framework (while Scrum is iterative)
+    Outdated model which not used that much anymore.
+
+Stages:
+The planning: 
+    Requirements gathering and lots of documentation.
+    Produces large documents of requirements
+    DDD is used for requirements gathering.
+
+Design:
+    System architecture developed, all the dependencies identified and solved.
+    Produces large document of system architecture.
+    Usually UML is used.
+
+Build:
+    Development process
+
+Testing:
+    Testing is software correspond to the requirements in the planning stage.
+    Also, checks if the software has no bugs.
+
+Production:
+    Deployment to servers.
+
+Support: 
+    the longest and most costly stage of the software development.
+
+DDD (Domain Driven Design):
+    A popular framework to design enterprise grade applications.
+    Has a high learning curve.
+    Ubiquitous language is emphasized.
+    DDD is often used in system rewrite and refactoring.
+    The primary source of knowledge is from domain experts.
+    You don't get coupled to old system technologies you try to solve the requirements with new tech.
+    In DDD we analyse and document user cases and stories.
+
+Benefits:
+    1. Is simple to understand.
+    2. Low learning curve.
+    3. A well documented process
+    4. Requires a lot good planning and design to succeed.
+
+Drawbacks:
+    1. It seems to be successful only in ideal environment.
+    2. Validation of software (by testers/shareholders) only happens after development.
+        Inability to change
+    3. There have been many failures of using this models, which have cause its popularity to go down.
+    4. Nowadays, seems to be used less and less.
+    5. Long delivery times which also adds to late visibility.
+

@@ -1,0 +1,17 @@
+Kanban:
+    Similar development framework to Scrum.
+    Less emphasis on planning and sprints.
+    More suited for tasks that are hard to estimate.
+    Simplier process than scrum
+    No sprints, work happens per work-item basis.
+    Developers have limit on how many work-items can be in progress.
+    It is very flexible. No prescribed roles or ceremonies.
+
+Sometimes companies actually do Kanban even though they official say they are doing Scrum.
+Trello seems to be a very good tool for Kanban.
+
+Agile Development (Extreme programming):
+    Alternative to Waterfall model.
+    Pre-Scrum framework that uses iterative development.
+    Based on frequent deliveries.
+    Uses visual tools for visibility.

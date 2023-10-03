@@ -1,11 +1,11 @@
-const {migrate} = require("postgres-migrations")
+const { migrate } = require("postgres-migrations")
 
 async function runMigrations() {
   const dbConfig = {
     database: "auth",
     user: "postgres",
     password: "postgres",
-    host: "localhost",
+    host: "postgres",
     port: 5432,
 
     // Default: false for backwards-compatibility
@@ -21,5 +21,5 @@ async function runMigrations() {
 }
 
 module.exports = {
-    runMigrations
+  runMigrations
 }

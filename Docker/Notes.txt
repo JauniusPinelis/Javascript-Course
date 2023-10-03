@@ -1,3 +1,36 @@
 What is Docker:
 A set of tools to help run, deploy, manage applications in containers.
 It is useful when you have more complex software setups.
+Docker is powered by Virtualization.
+Virtualization is a technology which allows to have several virtual machines in one physical machine.
+Very often in physical machines resources (space, ram memory, cpu, gpu) is underutilized.
+Physical machines put a lot of challenges for scaling up.
+
+From Physical machines to virtual machines (to containers)
+Docker is based on smaller virtual machines called containers.
+Vms are OS-heavy: they have Operating system, browser, text editors and etc.
+You can connect into VM and see representation of actual OS
+
+Docker containers are way smaller: they just have what is needed for the app to run.
+This means no GUI (OS), no browser, no text editors.
+
+Docker image:
+    Image is a lightweight package that has everything you need to run your software.
+    Images are usually held in Docker Repositories.
+    `Docker run hello-world`
+
+Why do we need docker:
+    External dependencies: Often in software development and hosting we have lots of external dependencies:
+        databases, caches, messaging, OS
+    Versioning: In some cases version mismatches causes instability.
+    Infrastructure as code: We need to contains information, how is our software built.
+
+Uses cases:
+    1. We can launch external dependencies without actually installing them.
+    2. We can package our applications into docker images.
+
+Docker-compose:
+    Docker Compose is a tool for defining and managing multi-container applications.
+    Docker-compose uses Yaml language.
+    Spacing and formatting is important in Yaml language.
+    

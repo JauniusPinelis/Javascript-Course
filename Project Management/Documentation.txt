@@ -1,0 +1,45 @@
+What is software documentation:
+    Everything we write/record to assist in development or usage of software.
+    There many types of different documentation.
+    Documentation is difficult to write.
+    As you develop the software, documentation should be developed as well.
+    Very often the documentation becomes outdated, which does no help.
+
+Why do we need documentation:
+    Maintenance:
+        Project are very long lived with incoming new developers.
+        Usually the knowledge of the system stays in developer's mind.
+        And with the turnover of developers the knowledge of the system is lost.
+    Understanding:
+        When project has proper documentation, the communication becomes easier.
+        Written documentation allows better analysis of the system, allows you to update that documentation.
+        Written documentation is easier for non technical users to understand.
+
+Useful tools for documentation:
+    Comments in code:
+        Developer documentation
+        Controversial topic
+        Code should be readable without any comments   
+    Api documentation:
+        Usually front-end developers do not know what endpoints, contracts returns do apis provide.
+        Front-end and back-end developers have to communicate on what back-end provides.
+        Back-end does need documentation on what it provides.
+        There many tools that help with this.
+        OpenApi is a standard of how api should expose documentation.
+        Swagger is the most common tool to document your api.
+    Readme
+        Most of the development repositories have readme.md
+        Git Readmes are written using MarkDown language
+        Readme should have info about:
+            basic project, how to starts, who is the author, how to contact development and etc.
+    
+    Github:
+        Full ecosystem of project documentation:
+            Readme.md
+            Issues
+            Discussions
+
+    Confluence:
+        Commercial tool developed by the same company which developed Jira.
+        Enterprise grade solution for bigger commercial applications.
+        Rich plugin interface.

@@ -85,11 +85,47 @@ Daily standup:
         3. Any blockers?
         4. Any issues?
 
+Time tracking:
+    By theory this is not part of a scrum.
+    Sometimes developers are required to track the time that has been worked on tasks.
+    Project-based companies use time-tracking to charge the clients.
+    Very often time-tracking is also used on measure productivity.
 
-    
+Advantages:
+    Predictability: allows stakeholders and product owners to see the long term of the plan.
+    Visibility: Everyone has visibility what is being developed (and by who) at any moment.
+    Documentation: Since we have backlog and scrum software, the roadmap and development is documented.
+    Standard: Scrum methodology is well accepted, developers find it easy to use it (since it is used in many companies)
+    Maturity: Scrum has been for a long time, it has tools, solves lots of issues.
+    Well-documented/certified: there is a lot of information, teaching in the web.
+
+Issues:
+    Complexity: Scrum is a big and complex framework, it takes time to learn.
+    Estimation: Estimation is complex, hard to get it right. 
+        Failing in estimation will cause issues in the later stages.
+    Requirements: IN practice, sometimes requirements are not detailed/correct in Scrum.
+        Often requirements are not clear.
+    Interruption from management: Bugs, incidents. Very often higher management does not obey scrum rules and contact developers directly.
+        This causes extra tasks for developers and it does not get recorded into scrum framework.
+    Time-consuming meetings: It is meeting heavy development.
+        Refinement assumes that all developers can pick any tasks, which is very often incorrect.
+
+Tools:
+    Trello (https://www.trello.com):
+        Very simple to use.
+        Basic functionality is free (used to be completely free)
+        Started as an alternative to very complex Jira.
+        Some functionalities for Scrum are not available.
+    Azure Boards 
+        It is very well integrated with development process: you can attach commits, pull-requests.
+        Scrum-oriented, it has most of the needed functionality available.
+        Still easy to use, developer oriented.
+        Queries for statistics are available.
+    Jira (most commonly used)
+        Most commonly used in enterprise.
+        One of most complex Scrum management tool, high learning curve.
+        Probably you will not find more powerful project management ecosystem in web.
 
 
 
-
-Scrum flow:
 
