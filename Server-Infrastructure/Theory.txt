@@ -1,0 +1,62 @@
+Why do web developers need to know about servers:
+    1. We need to know how to deploy our software and make it available to users.
+    2. Server management is a big price in software development.
+    3. Performance and security is very dependent on the servers and hosting.
+
+Servers and hosting can be a completely separate job position.
+Often this position is called SysAdmin.
+
+What are the responsibilities of Sysadmin:
+    1. Deployment of applications.
+    2. Monitoring of servers, network and applications.
+    3. Security of network.
+    4. Picking the right hardware
+    5. Monitoring the costs.
+
+Very often, Devops is also employed:
+    1. Help developers to do their job easier.
+    2. Automation of deployments.
+    3. Create pipelines for deployments.
+
+Nowadays IT companies are mostly cloud computing.
+
+Before the Cloud revolution we had:
+    1. Physical Servers (On premise):
+        Whenever you wanted to deploy a web application, you needed to buy an actually machine for running the web application.
+        It is a very complex route.
+        You need to setup your machine and keep it running for your application to live.
+        you are responsible for availability and physically maintaining the hardware.
+        Cases to consider: electricity loss or fire, cooling the machine, database backups, 
+            deploy or do updates to your code, how are going to protect your machine against unauthorized logins,
+            OS updates, computer restarts, running out of resources.
+        Limitations: Difficult to scale your application, 
+        Single application per server, often very underutilized resource, requires a lot of planning.
+    2. Virtual servers (VMs):
+        Virtualization which allowed to have several applications on a single servers.
+        Virtualization -> multiple virtual OS on a single machine.
+        This allows to balance resources for several applications on a single machines
+        VM allows flexible resource allocation.
+        Saves money.
+    3. Infrastructure as Code (Iaas)
+        Someone else is responsible for hardware.
+        Usually the Iaas give you an ftp servers or remote login (to virtual machine)
+        You login using cmd (or in windows using Remote Desktop) and install/copy everything you need.
+        You no longer need to worry about internet/electricity issues. 
+        But OS, updates installs, backups, deployments, scaling is still your concern.
+        Legal compliance may be an issue, because you do not know where your code/data actually is in.
+
+    https://hazelcast.com/wp-content/uploads/2021/12/infrastructure-as-a-service-iaas-800x435-1.png
+
+    4. Platform as a Service (PaaS)
+        You pick the hosting environment (platform) from the cloud provider.
+        This hosting environment usually has all the dependencies already installed.
+
+    5. Software as a Service (Saas)
+        Software hosted on web.
+        Very often cloud providers have limited app builders which require no code and no direct infrastructure.
+
+Azure:
+https://portal.azure.com
+https://dev.azure.com/
+
+
