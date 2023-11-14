@@ -1,27 +1,29 @@
 import { useState, useEffect } from 'react'
-import AddTodoForm from './components/AddTodoForm'
+import CreateTodoForm from './components/CreateTodoForm.tsx'
 import { Col, Container, Row } from 'react-bootstrap'
 import TodoList from './components/TodoList'
 import Todo from './models/Todo'
 import todoData from "./data/todoData.ts";
+import useLocalStorage from './hooks/useLocalStorage.ts'
 
 function App() {
 
-  const [todos, setTodos] = useState<Todo[]>([])
+  //const [todos, setTodos] = useState<Todo[]>([])
+  const [todos, setTodos] = useLocalStorage<Todo[]>("todos")
 
-  useEffect(() => {
-    setTodos(todoData)
-  }, [])
+  // useEffect(() => {
+  //   setTodos(todoData)
+  // }, [])
 
   return (
     <div>
-      <Container >
+      <Container  >
         <Row className='mt-5'>
           <Col>
             <TodoList setTodos={setTodos} todos={todos}></TodoList>
           </Col>
           <Col>
-            <AddTodoForm></AddTodoForm>
+            <CreateTodoForm setTodos={setTodos}></CreateTodoForm>
           </Col>
         </Row>
       </Container>
